@@ -1,4 +1,0 @@
-January|2500.00
-February|2450.50
-March|3000.00
-April|2100.25
