@@ -23,10 +23,14 @@ login
 
 !secure remote TELNET/SSH access
 
-line vty 0 4
-password *password*
-login
-transport input ssh telnet *(choose SSH, TELNET, or both)*
+ip domain-name cisco.com
+crypto key generate rsa
+username *username* secret *password*
+line vty 0 15
+transport input ssh
+login (local)
+exit
+ip ssh version 2
 exit
 
 !secure passwords
