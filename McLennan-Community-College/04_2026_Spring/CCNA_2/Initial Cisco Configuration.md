@@ -1,3 +1,5 @@
+# Initial Cisco Configuration
+
 !enable privileged exec
 
 en
@@ -35,8 +37,6 @@ service password-encryption
 
 banner motd # *\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* Message \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* #
 
-
-
 !configure interfaces IPv6
 
 interface F0/0 or G0/0 or F0/1 or G0/1
@@ -71,12 +71,11 @@ ip default-gateway *ipv4*
 
 !switching VLANs
 
-vlan <i>number</i>
+vlan *number*
 switchport access mode
-switchport vlan <i>number</i>
+switchport vlan *number*
 exit
 
 !save configuration
 
-copy run start
-
+wr mem
