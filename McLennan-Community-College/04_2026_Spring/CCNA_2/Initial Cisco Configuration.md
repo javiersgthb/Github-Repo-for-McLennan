@@ -78,4 +78,4 @@ exit
 
 !save configuration
 
-wr mem
+write mem (copy running-config startup-config)
