@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#This script creates three users, creates three groups, then adds the users to the groups
+
+#Create users
+useradd -c "Risha Patel" rpatel
+useradd -c  "Ali Selassi" aselassi
+useradd -c  "Ray Harper" rharper
+
+#Create groups
+groupadd sales
+groupadd marketing
+groupadd engineering
+
+#Add users to groups
+usermod -aG sales rpatel
+usermod -aG marketing aselassi
+usermod -aG engineering rharper
+
+#Display the user and group files to confirm the script created the users and groups
+echo "The script created these users:"
+tail -n 3 /etc/passwd
+echo "The script created these groups and modified their membership:"
+tail -n 3 /etc/group
